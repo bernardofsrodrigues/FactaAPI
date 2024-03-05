@@ -314,7 +314,6 @@ async function realizarCadastroProposta(codigoCliente, idSimulador, token) {
 
 
 // ------------------------> 7) Formalização: envio de link para assinatura (POST) <------------------------
-//aqui eu nem olhei
 async function enviarLinkAssinatura(codigoAf, tipoEnvio, token) {
     const url = 'https://webservice-homol.facta.com.br/proposta/envio-link';
   
@@ -338,10 +337,9 @@ async function enviarLinkAssinatura(codigoAf, tipoEnvio, token) {
     }
   }
   
-  // Exemplo de uso
-  const codigoAf = 'coloqueAquiOCodigoAf'; // Substitua pelo código retornado na etapa 6
-  const tipoEnvio = 'whatsapp'; // ou 'sms' conforme necessário
-  const token = 'coloqueAquiSeuToken'; // Substitua pelo seu token real
+  const codigoAf = ''; 
+  const tipoEnvio = 'whatsapp';
+  const token = ''; //outro arquivo
   
   enviarLinkAssinatura(codigoAf, tipoEnvio, token);
 
@@ -354,8 +352,8 @@ app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}/consultarSaldoFGTS/${cpf}`, "\t--> Incluir cpf");
     console.log(`Servidor rodando em http://localhost:${port}/simularValorLiquidoLiberado/${cpf}`, "\t--> Incluir cpf");
     console.log(`Servidor rodando em http://localhost:${port}/enviar-solicitacao`);
-    console.log(`Server running at http://localhost:${port}/enviar-dados-pessoais`);
-    console.log(`Server running at http://localhost:${port}/cadastrar-dados-pessoais`);
+    console.log(`Servidor rodando em http://localhost:${port}/enviar-dados-pessoais`);
+    console.log(`Servidor rodando em http://localhost:${port}/cadastrar-dados-pessoais`);
     console.log(`Servidor rodando na porta http://localhost:${port}/realizar-cadastro-proposta`);
 
 })
