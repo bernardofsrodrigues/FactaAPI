@@ -5,8 +5,8 @@ const app = express();
 const port = 3000;
 
 
-const usuario = '96533';
-const senha = 'uhagrem86s7sa9yzeed7';
+const usuario = 'user';
+const senha = 'key';
 let autorizacao;
 
 
